@@ -620,11 +620,9 @@ Docker garantiza reproducibilidad: tu entorno de análisis funciona igual en tu 
 ### Instalar Docker Engine
 
 ```bash
-sudo apt install -y docker.io docker-compose-v2
+sudo apt install -y docker.io docker-compose
 sudo systemctl enable docker
 sudo systemctl start docker
-
-# Agregar tu usuario al grupo docker (evita usar sudo)
 sudo usermod -aG docker $USER
 newgrp docker
 ```
@@ -633,8 +631,6 @@ newgrp docker
 
 ```bash
 docker run hello-world
-docker --version
-docker compose version
 ```
 
 ### Lanzar JupyterLab con Docker
